@@ -18,16 +18,28 @@ nav i{
     gap: 10px;
     padding: 15px;
 }
+.navmenu{
+  display: none;
+  font-size: large;
+}
+ul, li{
+  list-style: none;
+}
 form, footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     padding: 15px;
 }
 form input{
     height: 30px;
     width: 80%;
 }
+#card, #card2{
+  display: none;
+}
+
 .card {
     color: #055454;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -67,7 +79,6 @@ form input{
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
-    float: left;
   }
   
   .btn-group .button-page:hover {
@@ -119,18 +130,44 @@ footer i {
 
 @media (min-width: 576px) { 
     .container {
-        grid-template-columns: 0.3fr 1.8fr; 
+        grid-template-columns: 0.5fr 1.5fr; 
         grid-template-rows: 0.3fr 3.1fr 0.3fr; 
         grid-template-areas: 
-          "search search"
-          "navbar product"
+          "navbar navbar"
+          "search product"
           "footer footer"; 
       }
       .product {
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
       }
-}
+      .grid-card{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      #card2{
+        display: block;
+      }
+      #icono{
+        display: none;
+      }
+      .navbar{
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+      }
+      .navlogo{
+        flex-direction: row;
+      }
+      .navmenu{
+        display: flex;
+        flex-direction: row;
+        margin: 30px;
+        gap: 20px;
+        }
+
+      }
+
 @media (min-width: 992px) { 
     .container {
         grid-template-columns: 0.3fr 1.8fr; 
@@ -140,4 +177,29 @@ footer i {
           "navbar product"
           "footer product"; 
       }
+      .grid-card{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+      #card{
+        display: block;
+      }
+      .navbar{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: start;
+      }
+      .navlogo{
+        flex-direction: column;
+      }
+      .navmenu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        }
 }
