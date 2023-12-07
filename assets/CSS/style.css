@@ -169,6 +169,9 @@ footer i {
       }
 
 @media (min-width: 992px) { 
+  body{
+    width: 1400px;
+  }
     .container {
         grid-template-columns: 0.3fr 1.8fr; 
         grid-template-rows: 0.3fr 3.1fr 0.3fr; 
