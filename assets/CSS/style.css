@@ -32,7 +32,7 @@ form, footer{
     text-align: center;
     padding: 15px;
 }
-form input{
+select{
     height: 30px;
     width: 80%;
 }
