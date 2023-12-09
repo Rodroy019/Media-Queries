@@ -1,45 +1,48 @@
 *{
   margin: 0;  
   padding: 0;
-}
+  }
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+  }
 nav i{
     font-size: xx-large;
     margin-right: 40px;
-}
-.navlogo{
-    display: flex;
-    justify-content: start;
-    align-items:  center;
-    gap: 10px;
-    padding: 15px;
-}
-.navmenu{
-  display: none;
-  font-size: large;
+  }
+h4{
+  margin-bottom: 5px;
 }
 ul, li{
   list-style: none;
-}
+  }
 form, footer{
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 15px;
-}
+  }
 select{
     height: 30px;
     width: 80%;
-}
-#card, #card2{
+  }
+footer i {
+    font-size: x-large;
+    padding: 10px;
+  }
+.navlogo{
+    display: flex;
+    justify-content: start;
+    align-items:  center;
+    gap: 10px;
+    padding: 15px;
+  }
+.navmenu{
   display: none;
-}
-
+  font-size: large;
+  }
 .card {
     color: #055454;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -51,73 +54,58 @@ select{
   }
 .card-body {
     margin-top: 10px;
-}
-
+  }
+.button {
+  color: #055454;
+  font-size: 15px;
+  background-color: #c6cf31;
+  transition-duration: 0.4s;
+  }
 .button-ver{
-    color: #055454;
-    font-size: 15px;
-    background-color: #c6cf31;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     width: 60%;
     height: 30px;
     border-radius: 5px;
-    transition-duration: 0.4s;
     margin: 20px;
-}
-.button-ver:hover {
+  }
+.btn-group .button-page {
+  border: 1px solid #055454;
+  padding: 15px 15px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  }
+.button:hover{
     color: #c6cf31;
     background-color: #055454;
   }
-  .btn-group .button-page {
-    background-color: #c6cf31;
-    border: 1px solid #055454;
-    color: #055454;
-    padding: 15px 15px;
-    margin-bottom: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .btn-group .button-page:hover {
-    background-color: #055454;
-    color: #c6cf31;
-  }
-
-footer i {
-    font-size: x-large;
-    padding: 10px;
-}
-
-
 .container {
     display: grid; 
     grid-template-columns: 1fr; 
-    grid-template-rows: 0.3fr 0.3fr 3.1fr 0.3fr; 
+    grid-template-rows: 70px 70px auto 100px; 
     grid-template-areas: 
       "navbar"
       "search"
       "product"
       "footer"; 
   }
-  .navbar { 
+.navbar { 
     grid-area: navbar;
     background-color: #055454  ; 
     color: #c6cf31  ;
-}
-  .search { 
+  }
+.search { 
     grid-area: search; 
     background-color: #84bf94  ;
-}
-  .footer { 
+  }
+.footer { 
     grid-area: footer; 
     display: flex;
     justify-content: center;
     background-color: #c6cf31 ;
     color: #175b54;
-}
+  }
 .product {
     grid-area: product; 
     background-color: whitesmoke;
@@ -130,12 +118,15 @@ footer i {
 
 @media (min-width: 576px) { 
     .container {
-        grid-template-columns: 0.5fr 1.5fr; 
-        grid-template-rows: 0.3fr 3.1fr 0.3fr; 
+        grid-template-columns: 200px auto; 
+        grid-template-rows: 100px auto 100px; 
         grid-template-areas: 
           "navbar navbar"
           "search product"
           "footer footer"; 
+      }
+      #icono{
+        display: none;
       }
       .product {
         flex-direction: column;
@@ -143,13 +134,8 @@ footer i {
       .grid-card{
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 20px;
-      }
-      #card2{
-        display: block;
-      }
-      #icono{
-        display: none;
       }
       .navbar{
         display: flex;
@@ -165,34 +151,17 @@ footer i {
         margin: 30px;
         gap: 20px;
         }
-
       }
 
 @media (min-width: 992px) { 
-  body{
-    width: 1400px;
-  }
     .container {
-        grid-template-columns: 0.3fr 1.8fr; 
-        grid-template-rows: 0.3fr 3.1fr 0.3fr; 
         grid-template-areas: 
           "navbar search"
           "navbar product"
           "footer product"; 
       }
-      .grid-card{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-      }
-      #card{
-        display: block;
-      }
       .navbar{
-        display: flex;
         flex-direction: column;
-        text-align: center;
         align-items: center;
         justify-content: start;
       }
@@ -200,9 +169,7 @@ footer i {
         flex-direction: column;
       }
       .navmenu{
-        display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 30px;
         }
 }
